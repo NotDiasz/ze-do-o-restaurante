@@ -1,0 +1,2 @@
+Geo Sans Light — Manfred Klein. Fonte utilizada no cardápio original. Distribuída como 100% gratuita: https://www.dafont.com/geo-sans-light.font
+Afterglow é identificada no PDF, mas o arquivo completo com licença web não foi fornecido. Títulos usam Georgia como fallback; a marca original é preservada em imagem.
