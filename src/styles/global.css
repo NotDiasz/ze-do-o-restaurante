@@ -6,3 +6,47 @@
 .wordmark{display:block}.wordmark img{margin-bottom:-15px}.wordmark small{text-align:center;margin-top:0;font-size:10px;letter-spacing:1.5px}
 
 @media(max-width:370px){.hero h1{font-size:36px}.header .wordmark img{width:116px}.header .wordmark small{font-size:8px}.button.small{white-space:nowrap;font-size:11px;gap:12px}.hero .eyebrow{font-size:9px;letter-spacing:1px}}
+
+/* Motion stays subtle, keeps native scrolling and only hides content after JS loads. */
+.gallery-section{background:#472a1d;color:#fff8ec;overflow:clip}
+.gallery-section h2 em{color:#efac34}
+.gallery-section .section-heading>p{color:#e7cdb0}
+.gallery-shell{position:relative}
+.gallery-footer{display:flex;justify-content:space-between;gap:24px;margin-top:25px;align-items:center}
+.gallery-footer>span{font-size:11px;letter-spacing:1.6px;color:#e7cdb0}
+.gallery-footer p{font-size:13px;color:#e7cdb0}
+.gallery-mobile-hint{display:none}
+.button{transition:background .3s,transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.button>span{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.text-link{transition:color .25s,border-color .25s}
+.text-link>span{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.header nav a{position:relative;padding-block:10px}
+.header nav a:after{content:'';position:absolute;left:0;right:0;bottom:4px;height:1px;background:#b54425;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.food-card{transition:translate .5s cubic-bezier(.2,.7,.2,1)}
+.food-image img{transition:transform .85s cubic-bezier(.2,.7,.2,1)}
+.food-card>div:not(.food-image)>span{transition:transform .4s}
+.history-art{overflow:hidden}
+.history-art img,.visit-photo img{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.since-stamp{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .button:hover{transform:translateY(-3px);box-shadow:0 9px 20px -13px #472a1d}
+ .button:hover>span{transform:translate(3px,-3px)}
+ .text-link:hover>span{transform:translate(3px,-2px)}
+ .header nav a:hover:after{transform:scaleX(1)}
+ .food-card:hover{translate:0 -7px}
+ .food-card:hover img{transform:scale(1.065)}
+ .food-card:hover>div:not(.food-image)>span{transform:translate(4px,-4px)}
+ .history-art:hover img,.visit-photo:hover img{transform:scale(1.035)}
+ .hero-photo:hover .since-stamp{transform:rotate(6deg) translateY(-3px)}
+}
+.header nav a:focus-visible:after{transform:scaleX(1)}
+@media(max-width:700px){
+ .gallery-footer{display:block;margin-top:21px}
+ .gallery-footer p{margin-top:9px;font-size:13px}
+ .gallery-desktop-hint{display:none}
+ .gallery-mobile-hint{display:inline}
+}
+@media(prefers-reduced-motion:reduce){
+ .button:hover,.food-card:hover img,.history-art:hover img,.visit-photo:hover img{transform:none}
+ .food-card:hover{translate:none}
+}
