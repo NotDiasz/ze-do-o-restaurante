@@ -22,7 +22,7 @@ O resultado estático fica em `dist/`. Não é necessário servidor Node em prod
 
 ## Configuração para deploy
 
-Defina `PUBLIC_MENU_URL` com a URL final do cardápio **antes do build**. O fallback em produção aponta para o endereço reservado no Sites, ainda não publicado. `.openai/hosting.json` identifica essa reserva e configura `dist` como pasta pública; o arquivo não publica o site sozinho.
+Os links em produção usam `https://ze-do-o-cardapio.netlify.app` por padrão. A variável `PUBLIC_MENU_URL` permite trocar esse endereço antes do build. Em desenvolvimento, os links continuam usando a prévia local do outro projeto.
 
 ## Conteúdo e identidade
 
@@ -49,4 +49,4 @@ Conteúdo principal: `src/pages/index.astro`. Estilos: `src/styles/global.css`. 
 
 ## Publicação
 
-Projeto preparado para hospedagem estática. O deploy deve ser executado somente após autorização do responsável.
+Projeto preparado para hospedagem estática. O Netlify publica automaticamente os pushes na branch `main`; validar as alterações antes de enviar.
